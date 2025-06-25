@@ -10,11 +10,12 @@ const HeaderContent = styled.div``;
 interface HeaderProps extends InputHTMLAttributes<HTMLInputElement> {}
 
 export default function Header({ children, ...props }: HeaderProps) {
-	return ( <StyledHeader {...props}>
-        <HeaderContent>
-            <TitleBar />
-            {children}
-        </HeaderContent>
+  return (
+    <StyledHeader {...props}>
+      <HeaderContent>
+        <TitleBar />
+        {children}
+      </HeaderContent>
     </StyledHeader>
-);
+  );
 }
