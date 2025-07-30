@@ -11,7 +11,7 @@ interface About {
 interface Contact {
   email: string;
   github: string;
-  linkedin: string;
+  linkedIn: string;
   phone: string;
 }
 
@@ -28,7 +28,7 @@ interface Experience {
   location?: string;
   startDate?: string;
   endDate?: string;
-  description: BulletPoint[];
+  description: string[];
 }
 
 interface Project {
@@ -36,7 +36,7 @@ interface Project {
   link?: string;
   startDate?: string;
   endDate?: string;
-  description: BulletPoint[];
+  description: string[];
 }
 
 export const about: About = {
@@ -59,7 +59,7 @@ export const about: About = {
 export const contact: Contact = {
   email: "alexhope256@gmail.com",
   github: "https://github.com/MRlolface249",
-  linkedin: "https://www.linkedin.com/in/alexhope02/",
+  linkedIn: "https://www.linkedin.com/in/alexhope02/",
   phone: "027 290 9551",
 };
 
@@ -86,12 +86,8 @@ export const work: Experience[] = [
     startDate: "04/2024",
     endDate: "06/2024",
     description: [
-      {
-        text: "Collaborated on the ENGclusion longitudinal study, following 200 engineering graduates into their careers to increase inclusive outcomes for students.",
-      },
-      {
-        text: "Streamlined survey forms using JavaScript to help self-populate over 30 data entries for participants.",
-      },
+      "Collaborated on the ENGclusion longitudinal study, following 200 engineering graduates into their careers to increase inclusive outcomes for students.",
+      "Streamlined survey forms using JavaScript to help self-populate over 30 data entries for participants.",
     ],
   },
   {
@@ -101,18 +97,10 @@ export const work: Experience[] = [
     startDate: "11/2023",
     endDate: "02/2024",
     description: [
-      {
-        text: "Contributed to the maintenance system for the Swiftdrop self-service bag drop, which processes 100s of millions of international passengers annually.",
-      },
-      {
-        text: "Restructured the maintenance page by developing a 3D diagnostic page to provide intuitive information to staff.",
-      },
-      {
-        text: "Applied technologies such as Unity and Docker to reduce deployment and development time.",
-      },
-      {
-        text: "Developed the back-end in C#, driving animations through over 40 API calls.",
-      },
+      "Contributed to the maintenance system for the Swiftdrop self-service bag drop, which processes 100s of millions of international passengers annually.",
+      "Restructured the maintenance page by developing a 3D diagnostic page to provide intuitive information to staff.",
+      "Applied technologies such as Unity and Docker to reduce deployment and development time.",
+      "Developed the back-end in C#, driving animations through over 40 API calls.",
     ],
   },
   {
@@ -122,11 +110,9 @@ export const work: Experience[] = [
     startDate: "04/2023",
     endDate: "11/2023",
     description: [
-      { text: "Oversaw the home department and all sales in the department." },
-      {
-        text: "Assisted customers with any questions about products in the home department.",
-      },
-      { text: "Conducted sales in the menswear department." },
+      "Oversaw the home department and all sales in the department.",
+      "Assisted customers with any questions about products in the home department.",
+      "Conducted sales in the menswear department.",
     ],
   },
   {
@@ -136,14 +122,10 @@ export const work: Experience[] = [
     startDate: "01/2022",
     endDate: "12/2022",
     description: [
-      {
-        text: "Coordinated communication between floor and kitchen staff to ensure smooth operations.",
-      },
-      {
-        text: "Worked closely with a team of 3 bartenders to prepare over 100 drinks per night.",
-      },
-      { text: "Managed 6 tables of 4-8 people at a time." },
-      { text: "Trained 6 people in both bar and waiting positions." },
+      "Coordinated communication between floor and kitchen staff to ensure smooth operations.",
+      "Worked closely with a team of 3 bartenders to prepare over 100 drinks per night.",
+      "Managed 6 tables of 4-8 people at a time.",
+      "Trained 6 people in both bar and waiting positions.",
     ],
   },
 ];
@@ -155,12 +137,8 @@ export const projects: Project[] = [
     startDate: "11/2024",
     endDate: "Present",
     description: [
-      {
-        text: "Designed a web application using React and TypeScript to help users identify prerequisite media for movies, TV shows, and books/comics.",
-      },
-      {
-        text: "Engineered a scalable and secure back-end REST API using ASP.NET and Entity Framework to manage media data and relationships.",
-      },
+      "Designed a web application using React and TypeScript to help users identify prerequisite media for movies, TV shows, and books/comics.",
+      "Engineered a scalable and secure back-end REST API using ASP.NET and Entity Framework to manage media data and relationships.",
     ],
   },
   {
@@ -169,15 +147,9 @@ export const projects: Project[] = [
     startDate: "02/2024",
     endDate: "05/2024",
     description: [
-      {
-        text: "Partnered with Women in Engineering to develop a scholarship finder application for their official website.",
-      },
-      {
-        text: "Constructed the back-end using a Next.js API, connected to Neon Serverless PostgreSQL for data management.",
-      },
-      {
-        text: "Established an API framework to enable advanced search and filtering functionality.",
-      },
+      "Partnered with Women in Engineering to develop a scholarship finder application for their official website.",
+      "Constructed the back-end using a Next.js API, connected to Neon Serverless PostgreSQL for data management.",
+      "Established an API framework to enable advanced search and filtering functionality.",
     ],
   },
   {
@@ -186,15 +158,9 @@ export const projects: Project[] = [
     startDate: "02/2024",
     endDate: "05/2024",
     description: [
-      {
-        text: "Created a C# REST API to support a website for tracking baby health data.",
-      },
-      {
-        text: "Designed an SQLite database using a code-first approach with .NET Entity Framework.",
-      },
-      {
-        text: "Integrated WebSockets for real-time scale readings and live chat functionality.",
-      },
+      "Created a C# REST API to support a website for tracking baby health data.",
+      "Designed an SQLite database using a code-first approach with .NET Entity Framework.",
+      "Integrated WebSockets for real-time scale readings and live chat functionality.",
     ],
   },
   {
@@ -203,15 +169,9 @@ export const projects: Project[] = [
     startDate: "02/2024",
     endDate: "05/2024",
     description: [
-      {
-        text: "Developed a streamlined membership application platform for university clubs using React and TypeScript.",
-      },
-      {
-        text: "Built the back-end with Next.js using server actions, integrated with a Neon database using Drizzle ORM for efficient data storage and management.",
-      },
-      {
-        text: "Programmed editable sign-up forms with auto-populating fields for improved usability.",
-      },
+      "Developed a streamlined membership application platform for university clubs using React and TypeScript.",
+      "Built the back-end with Next.js using server actions, integrated with a Neon database using Drizzle ORM for efficient data storage and management.",
+      "Programmed editable sign-up forms with auto-populating fields for improved usability.",
     ],
   },
   {
@@ -220,15 +180,9 @@ export const projects: Project[] = [
     startDate: "03/2023",
     endDate: "10/2023",
     description: [
-      {
-        text: "Implemented a display and landing website in 2-week sprints in a group of 8.",
-      },
-      {
-        text: "Built a dynamic website with customizable project pages using React components.",
-      },
-      {
-        text: "Defined Younite's acceptance criteria and user stories with the project manager to guide website development.",
-      },
+      "Implemented a display and landing website in 2-week sprints in a group of 8.",
+      "Built a dynamic website with customizable project pages using React components.",
+      "Defined Younite's acceptance criteria and user stories with the project manager to guide website development.",
     ],
   },
 ];
@@ -240,15 +194,9 @@ export const volunteering: Experience[] = [
     startDate: "10/2023",
     endDate: "10/2024",
     description: [
-      {
-        text: "Supervised a team to plan, execute, and oversee over 10 social activities for SESA.",
-      },
-      {
-        text: "Organized all social activities for the 48-hour hackathon attended by 90 participants in collaboration with the Web Development and Consulting Club social lead.",
-      },
-      {
-        text: "Planned and hosted the end-of-year dinner with over 100 attendees and a budget of $12,000.",
-      },
+      "Supervised a team to plan, execute, and oversee over 10 social activities for SESA.",
+      "Organized all social activities for the 48-hour hackathon attended by 90 participants in collaboration with the Web Development and Consulting Club social lead.",
+      "Planned and hosted the end-of-year dinner with over 100 attendees and a budget of $12,000.",
     ],
   },
 ];

@@ -4,7 +4,7 @@ export default function Page() {
   return (
     <>
       <div>
-        <Header></Header>
+        <Header/>
       </div>
     </>
   );

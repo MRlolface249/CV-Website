@@ -3,6 +3,7 @@ import Anchor from "../atomic/Anchor";
 import { EmailLogo, GithubLogo, LinkedinLogo, PhoneLogo } from "../icons";
 import { about, contact } from "@/app/constants";
 import { Github, Linkedin, Mail, PhoneCall } from "lucide-react";
+import LinkIconContainer from "../atomic/LinkIcon";
 
 const Title = styled.div`
   padding: 2rem 5rem;
@@ -10,73 +11,68 @@ const Title = styled.div`
   flex-direction: column;
   background-color: #313c4e;
   color: white;
-  border-radius: 3rem;
+  border-radius: 2rem;
+  gap: 2rem;
 `;
+
+const StyledName = styled.div`
+  font-size: 12rem;
+` 
+const StyledTitle = styled.div`
+  font-size: 6rem;
+  color: #54bcc4;
+`
 
 const ExternalLinks = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  gap: 5rem;
+  gap: 2rem;
 `;
 
 const StyledLink = styled.div`
   display: flex;
-  align-items: start;
+  align-items: center;
   gap: 1rem;
+  justify-content: start;
+  flex-direction: row;
+  
 `;
 
 const StyledAnchor = styled(Anchor)`
   color: inherit;
   text-decoration: none;
-`;
-
-const linkIconStyles = css``;
-
-const StyledMailIcon = styled(Mail)`
-  ${linkIconStyles};
-`;
-
-const StyledGithubIcon = styled(Github)`
-  ${linkIconStyles};
-`;
-
-const StyledLinkedinIcon = styled(Linkedin)`
-  ${linkIconStyles};
-`;
-
-const StyledPhoneIcon = styled(PhoneCall)`
-  ${linkIconStyles};
+  font-size: 4rem;
 `;
 
 export default function TitleBar() {
   return (
     <Title>
-      <h1>{about.name}</h1>
-      <h2>{about.title}</h2>
+      <StyledName>{about.name}</StyledName>
+      <StyledTitle>{about.title}</StyledTitle>
       <ExternalLinks>
         <StyledLink>
-          <StyledMailIcon size={64} strokeWidth={2} />
+          <LinkIconContainer icon={<Mail size={64} strokeWidth={2}/>}/>
           <StyledAnchor href={`mailto:${contact.email}`} title="email">
-            <p>{contact.email}</p>
+            {contact.email}
           </StyledAnchor>
         </StyledLink>
         <StyledLink>
-          <StyledGithubIcon size={64} strokeWidth={2} />
+          <LinkIconContainer icon={<Github size={64} strokeWidth={2}/>}/>
           <StyledAnchor href={contact.github} title="github">
-            <p>Github</p>
+            Github
           </StyledAnchor>
         </StyledLink>
         <StyledLink>
-          <StyledLinkedinIcon size={64} strokeWidth={2} />
-          <StyledAnchor href={contact.linkedin} title="linkedin">
-            <p>Linkedin</p>
+          <LinkIconContainer icon={<Linkedin size={64} strokeWidth={2}/>}/>
+          <StyledAnchor href={contact.linkedIn} title="linkedin">
+            {contact.linkedIn}
           </StyledAnchor>
         </StyledLink>
         <StyledLink>
-          <StyledPhoneIcon size={64} strokeWidth={2} />
+          <LinkIconContainer icon={<PhoneCall size={64} strokeWidth={2}/>}/>
           <StyledAnchor href={contact.phone} title="phone number">
-            <p>{contact.phone}</p>
+            {contact.phone}
           </StyledAnchor>
         </StyledLink>
       </ExternalLinks>
